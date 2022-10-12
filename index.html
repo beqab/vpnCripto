@@ -69,6 +69,72 @@
       </div>
     </div>
   </header>
+
+  <div class="cover_links  d-md-flex">
+
+    <div class="d-flex align-items-center justify-content-center mb-2 mb-md-0">
+      <a href="https://coinmarketcap.com/currencies/ageofgods/" target="_blank"><img height=""
+          src="https://cdn.ageofgods.net/assets/icons/Group 765.png"></a>
+      <div class="buyText">
+        Buy on:
+      </div>
+
+
+      <svg xmlns="http://www.w3.org/2000/svg" class="d-bock d-md-none closeIcon" width="33" height="33"
+        viewBox="0 0 33 33">
+        <g id="Group_779" data-name="Group 779" transform="translate(-362.695 -92)">
+          <circle id="Ellipse_781" data-name="Ellipse 781" cx="16.5" cy="16.5" r="16.5"
+            transform="translate(362.695 92)" fill="#fff" opacity="0.13"></circle>
+          <path id="Icon_ionic-ios-arrow-down" data-name="Icon ionic-ios-arrow-down"
+            d="M5,1.724,8.783,5.508a.712.712,0,0,0,1.009,0,.721.721,0,0,0,0-1.012L5.508.208A.713.713,0,0,0,4.523.187L.208,4.492A.715.715,0,0,0,1.218,5.5Z"
+            transform="translate(384.194 111.359) rotate(180)" fill="#81eeff"></path>
+        </g>
+      </svg>
+
+
+
+
+    </div>
+    <div class="buyList">
+      <a href="https://pancakeswap.finance/swap?outputCurrency=0x40c8225329bd3e28a043b029e0d07a5344d2c27c"
+        target="_blank">
+
+        <img height="" src="https://cdn.ageofgods.net/assets/icons/Group 766.png">
+        <span>PanCakeSwap
+          <div class="borderOnhover"></div>
+
+        </span>
+      </a>
+      <!-- <a href="https://www.kucoin.com/trade/AOG-USDT" target="_blank">
+        <img height="28px" src="https://cdn.worldvectorlogo.com/logos/kucoin-shares.svg">
+        <span>Kucoin
+          <div class="borderOnhover"></div>
+        </span>
+      </a> -->
+      <a href="https://www.gate.io/trade/AOG_USDT?ref=3809894" target="_blank">
+
+        <img height="" src="https://cdn.ageofgods.net/assets/icons/Group 744.png">
+        <span>Gate.io
+          <div class="borderOnhover"></div>
+
+        </span>
+      </a>
+      <a class="withTooltip" href="https://bit.ly/39Zz6WV" target="_blank">
+        <div class="TooltipItem">
+          <img src="https://cdn.ageofgods.net/assets/icons/Icon feather-info.svg">
+          <div class="text">
+            Lowest Fee
+          </div>
+        </div>
+        <img height="" src="https://cdn.ageofgods.net/assets/icons/Biswap Token (BSW).png">
+        <span>Biswap
+          <div class="borderOnhover"></div>
+        </span>
+      </a>
+
+    </div>
+
+  </div>
   <section id="firstSection" class="firstSection">
 
     <div class="container">
@@ -472,6 +538,35 @@
       e.stopPropagation()
 
     })
+
+    $("nav ul li").each(function () {
+      $(this).click(() => {
+        $("nav").removeClass("open")
+      })
+
+    })
+
+    var rotate = true
+    $(".closeIcon").click(function () {
+      if (rotate) {
+
+        $(this).css({ transform: "rotate(180deg)" })
+      }
+      else {
+
+        $(this).css({ transform: "rotate(0deg)" })
+
+      }
+      rotate = !rotate
+
+      $(".buyList").slideToggle();
+    });
+
+
+    if ($(window).width() < 760) {
+
+      $(".buyList").slideToggle();
+    }
   </script>
 </body>
 
